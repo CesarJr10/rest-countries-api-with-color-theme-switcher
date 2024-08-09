@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+:root {
+    --dark-blue-dm: hsl(209, 23%, 22%);
+    --very-dark-blue-dm: hsl(207, 26%, 17%);
+    --very-dark-blue-lm: hsl(200, 15%, 8%);
+    --dark-gray-lm: hsl(0, 0%, 52%);
+    --very-light-gray-lm: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Nunito Sans",sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+/*--------HEADER---------*/
+
+header{
+    background-color: var(--white);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    z-index: 10; 
+}
+
+.header-container{
+    padding: 14px 24px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+
+.header-button{
+    display: flex;
+    align-items: center;
+    padding:10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.header-button ion-icon {
+    margin-right: 8px; 
+}
+
+body{
+    
+    background-color: var(--very-light-gray-lm);
+}
+
+body.dark{
+   color: var(--white); 
+
+   background-color: var(--very-dark-blue-dm);
+
+   header{
+     background-color: var(--dark-blue-dm);
+   }
+   .card-country{
+    background-color: var(--dark-blue-dm);
+   }
+   .header-button{
+    color: var(--white);
+   }
+   .input-container{
+    color:var(--white);
+    background-color: var(--dark-blue-dm);
+   }
+   .filter{
+    color:var(--white);
+    background-color: var(--dark-blue-dm);
+   }
+}
+
+
+
+/*----------MAIN-----------*/
+main{
+   
+    padding: 24px; 
+    padding-top: 80px;
+}
+
+
+
+/*----------COUNTRIES DIV---------*/
+
+.countries {
+    
+    max-width: 1261px;
+    margin-top: 56px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    justify-content: space-between;
+}
+
+.card-country {
+    display: inline-block;
+    width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--white);
+}
+
+.card-country:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.title-card {
+    font-size: 24px;
+    margin-block: 16px;
+}
+
+.text-card {
+    padding-inline: 16px;
+}
+
+.card-text p {
+    margin-block: 8px;
+}
+
+.card-country img {
+    width: 100%;
+    /* height: auto;  */
+    aspect-ratio: 16/9;
+    object-fit: cover; 
+    max-height: 180px; 
+}
+
+a {
+    text-decoration-line: none;
+    color: inherit;
+}
+
+
+.search-container{
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 16px;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.input-container{
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 24px;
+    color: var(--dark-gray-lm);
+    overflow: hidden;
+    background-color: var(--white);
+    color: #000000;
+}
+
+.label-search{
+    cursor: pointer;
+}
+
+.input-container  input {
+    border: none;
+    outline: none;
+    padding: 16px;
+    width: 90%;
+    background-color: inherit;
+    color: inherit;
+}
+
+.input-container:hover {
+    outline: 1px solid var(--dark-blue-dm);
+}
+
+
+.input-container:focus-within {
+    outline: 2px solid var(--dark-blue-dm);
+}
+
+
+.input-container input::placeholder {
+    color:var(--dark-gray-lm);
+}
+
+.filter {
+    width: 220px;
+    padding: 16px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: var(--white);
+    color:#000000;
+}
+
+.filter:hover{
+    outline: 1px solid var(--dark-blue-dm);
+    cursor: pointer;
+}
+.filter:focus{
+    outline: 2px solid var(--dark-blue-dm);
+}
+
+
+
+@media (max-width: 768px){
+    .header-container{
+        padding: 14px 16px;
+    }
+    .countries{
+        justify-content: center;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px; 
+    }
+
+    
+    .filter {
+        width: 180px;
+    }
+
+}
+
+

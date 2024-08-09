@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Country API | Cesar Contreras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <strong>
+                <h3 class="header-title">Where in the world?</h3>
+            </strong>
+            <button class="header-button theme-changer">
+                <ion-icon name="moon-outline"></ion-icon>
+                Dark Mode
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="search-container">
+            <div class="input-container">
+                <label class="label-search" for="input-search" ><ion-icon name="search-outline"></ion-icon></label>
+                <input type="search" id="input-search" name="search-input" class="search-input" placeholder="Search for a country..." />
+            </div>
+
+            <select name="filter" class="filter" id="">
+                <option value="" hidden>Filter by Region</option>
+                <option value="Africa">Africa</option>
+                <option value="America">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+        <div class="countries" id="countries"></div>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+    <script  src="ui-theme.js">
+        
+    </script>
+    <script>checkUiTheme();</script>
+</body>
+
+</html>
